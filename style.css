@@ -8,12 +8,13 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: rgb(4, 0, 65);
+  padding: 0 1rem;
+  background-color: rgb(0, 0, 0);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  position: relative;
 }
 
 body::-webkit-scrollbar {
+  width: 8px;
   width: 8px; /* Adjust the scrollbar width */
 }
 
@@ -21,26 +22,11 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(#fec006, #fff, #009dff);
   border-radius: 20px;
   width: 6px;
-  width: 6px;
-}
-
-hr {
-  width: 95%;
-  margin: auto;
-}
-
-#cursor {
-  height: 10px;
-  width: 10px;
-  background: radial-gradient(#72f274, #f7b968);
-  border-radius: 50%;
-  position: fixed;
-  z-index: 9999;
 }
 
 main {
   background-size: cover;
-  min-height: 100vh;
+  height: 100%;
 }
 main header {
   z-index: 10;
@@ -65,7 +51,7 @@ main header nav .nav-left {
   justify-content: center;
   align-items: center;
 }
-main header nav .nav-left a img {
+main header nav .nav-left img {
   width: 120px;
   display: flex;
   justify-content: center;
@@ -84,7 +70,7 @@ main header nav .nav-right a {
   color: #fff;
   font-weight: 700;
   padding: 1em;
-  opacity: 50%;
+  opacity: 30%;
   display: flex;
   transition: all ease 0.1s;
   position: relative;
@@ -102,7 +88,7 @@ main header nav .nav-right a::after {
   bottom: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(to right, #fec006, #fff, #009dff);
+  background-color: #fec006;
   transition: all ease 0.5s;
 }
 main header nav .nav-right a:hover::after {
@@ -124,210 +110,52 @@ main header nav .button:hover {
   transition: all ease 5s;
   background-size: 110%;
 }
+main header nav .button:hover img {
+  scale: 1.1;
+}
 main nav img:hover {
   cursor: pointer;
 }
 main #home {
-  padding-top: 4rem;
   width: 100%;
-  height: 100%;
-  display: flex;
-  gap: 7rem;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-image: url(bg1.webp);
-  background-size: cover;
-  background-position: bottom;
-}
-main #home #top-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-main #home #top-home h1 {
-  text-align: center;
-  font-size: 4rem;
-  width: 40%;
-  background-image: url(bg3.png);
-  background-size: cover;
-  background-position: right;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-main #home #top-home h1::-moz-selection {
-  color: #fec006;
-}
-main #home #top-home h1::selection {
-  color: #fec006;
-}
-main #home #top-home p {
-  font-size: 1.5rem;
-  color: #fff;
-}
-main #home #top-home button {
-  margin-top: 20px;
-  padding: 1.1rem 3rem;
-  border-radius: 30px;
-  background: linear-gradient(to right, #fec006, #fff, #009dff);
-  color: #000;
-  font-size: 1em;
-  border: 1px solid #fff;
-  transition: all ease 0.5s;
-  box-shadow: 5px 5px 10px rgb(99, 99, 99);
-}
-main #home #top-home button:hover {
-  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0);
-}
-main #home #bottom-home {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-main #home #bottom-home #para1 {
-  font-size: 1.8rem;
-  color: #fff;
+  height: 100vh;
   position: relative;
-  z-index: 1;
 }
-main #home #bottom-home #para2 {
-  font-size: 1.8rem;
-  color: #ffc400;
-  position: absolute;
-  padding: 2px;
-  filter: blur(10px);
-}
-main #home #bottom-home .logos {
-  display: flex;
-  gap: 1rem;
-  width: 70%;
-  justify-content: space-around;
-}
-main #services {
-  padding-top: 4rem;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-}
-main #services h2 {
+main #home h1 {
   color: #fff;
   font-size: 7rem;
+  width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
 }
-main #services h4 {
-  font-size: 3rem;
-}
-main #services .service-box-1 {
-  padding: 4rem;
-  color: #fff;
+main #home span {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  z-index: 9;
   display: flex;
   justify-content: center;
-  align-items: start;
+  color: rgba(255, 255, 255, 0.2823529412);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid #535353;
+  border: 10px;
 }
-main #services .service-box-1 .left-service {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: flex-start;
+main #home span::-moz-selection {
+  color: #fec006;
 }
-main #services .service-box-1 .left-service h3 {
-  font-size: 5rem;
+main #home span::selection {
+  color: #fec006;
 }
-main #services .service-box-1 .left-service p {
-  width: 70%;
-  font-size: 1.5rem;
+main #home .bg-img img {
+  z-index: 8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-main #services .service-box-1 .left-service ul {
-  padding-left: 3rem;
-  font-size: 1rem;
-}
-main #services .service-box-2 {
-  padding: 4rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  gap: 3rem;
-}
-main #services .service-box-2 .right-services {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: flex-start;
-}
-main #services .service-box-2 img {
+main #About {
+  height: 100%;
   width: 100%;
-  height: auto;
-  display: block;
-}
-main #services .service-box-2 .left-service {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: flex-start;
-}
-main #services .service-box-2 h3 {
-  font-size: 5rem;
-}
-main #services .service-box-2 p {
-  width: 70%;
-  font-size: 1.5rem;
-}
-main #services .service-box-2 ul {
-  padding-left: 3rem;
-  font-size: 1rem;
-}
-main #services .service-box-3 {
-  padding: 4rem;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-main #services .service-box-3 .left-service {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: flex-start;
-}
-main #services .service-box-3 .left-service h3 {
-  font-size: 5rem;
-}
-main #services .service-box-3 .left-service p {
-  width: 70%;
-  font-size: 1.5rem;
-}
-main #services .service-box-3 .left-service ul {
-  padding-left: 3rem;
-  font-size: 1rem;
-}
-main #featured-work {
-  padding: 4rem;
-  width: 100%;
-}
-main #featured-work #work-box-1 {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  gap: 20px;
-  border: 1px solid white;
-}
-main #featured-work #work-box-1 #left-work-box-1 {
-  width: 30%;
-}
-main #featured-work #work-box-1 #right-work-box-1 {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 100px;
 }/*# sourceMappingURL=style.css.map */
