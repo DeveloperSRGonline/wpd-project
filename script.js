@@ -7,3 +7,4 @@ document.addEventListener("mousemove",function(dets){
     crsr_br.style.top = dets.y - 100 + "px";
 })
     
+

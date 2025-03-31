@@ -8,7 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: rgb(4, 0, 65);
+  background-color: #1545bf;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
 }
@@ -27,10 +27,9 @@ body::-webkit-scrollbar-thumb {
 hr {
   width: 95%;
   margin: auto;
-  opacity: 40%;
 }
 
-#cursor {
+/* #cursor {
   height: 10px;
   width: 10px;
   background: radial-gradient(#72f274, #f7b968);
@@ -46,7 +45,8 @@ hr {
   filter: blur(50px);
   border-radius: 50%;
   position: fixed;
-}
+    z-index:-10;
+} */
 
 main {
   background-size: cover;
@@ -91,10 +91,9 @@ main header nav .nav-right {
 main header nav .nav-right a {
   font-size: 20px;
   text-decoration: none;
-  color: #fff;
+  color: #b8feff;
   font-weight: 700;
   padding: 1em;
-  opacity: 50%;
   display: flex;
   transition: all ease 0.1s;
   position: relative;
@@ -130,7 +129,7 @@ main #home {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-image: url(bg1.png);
+  background-image: url(https://wallpaperaccess.com/full/4128921.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -142,9 +141,9 @@ main #home #top-home {
 }
 main #home #top-home h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
   width: 40%;
-  background-image: url(bg3.png);
+  background-image: url(https://img.freepik.com/premium-photo/blue-abstract-curved-glass-background-3d-rendering_778569-815.jpg);
   background-size: cover;
   background-position: right;
   -webkit-background-clip: text;
@@ -156,23 +155,27 @@ main #home #top-home h1::-moz-selection {
 main #home #top-home h1::selection {
   color: #fec006;
 }
+h1,h2::selection {
+  color: #fec006;
+}
 main #home #top-home p {
   font-size: 1.5rem;
   color: #fff;
 }
-main #home #top-home button {
+main #home #top-home #connect {
   margin-top: 20px;
   padding: 1.1rem 3rem;
   border-radius: 30px;
-  background: linear-gradient(to right, #fec006, #fff, #009dff);
+  background-image: url(https://img.freepik.com/premium-photo/blue-abstract-curved-glass-background-3d-rendering_778569-815.jpg);
+  background-size: cover;
   color: #000;
   font-size: 1em;
   border: 1px solid #fff;
   transition: all ease 0.5s;
-  box-shadow: 5px 5px 10px rgb(99, 99, 99);
+  z-index: 11;
 }
-main #home #top-home button:hover {
-  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0);
+main #home #top-home #connect:hover {
+  scale: 1.1;
 }
 main #home #bottom-home {
   width: 100%;
@@ -222,6 +225,9 @@ main #services h4 {
   font-size: 3rem;
   color: #fec006;
 }
+#services img {
+  border-radius: 10px;
+}
 main #services .service-box-1 {
   padding: 4rem;
   color: #fff;
@@ -238,10 +244,13 @@ main #services .service-box-1 .left-service {
 }
 main #services .service-box-1 .left-service h3 {
   font-size: 5rem;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 main #services .service-box-1 .left-service p {
   width: 70%;
   font-size: 1.5rem;
+  color: #ffffff9b;
 }
 main #services .service-box-1 .left-service ul {
   padding-left: 3rem;
@@ -276,10 +285,13 @@ main #services .service-box-2 .left-service {
 }
 main #services .service-box-2 h3 {
   font-size: 5rem;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 main #services .service-box-2 p {
   width: 70%;
   font-size: 1.5rem;
+  color: #ffffff9b;
 }
 main #services .service-box-2 ul {
   padding-left: 3rem;
@@ -301,10 +313,13 @@ main #services .service-box-3 .left-service {
 }
 main #services .service-box-3 .left-service h3 {
   font-size: 5rem;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
 }
 main #services .service-box-3 .left-service p {
   width: 70%;
   font-size: 1.5rem;
+  color: #ffffff9b;
 }
 main #services .service-box-3 .left-service ul {
   padding-left: 3rem;
@@ -341,7 +356,8 @@ main #featured-work #work-box-1 #right-work-box-1 h4 {
 }
 main #featured-work #work-box-1 #right-work-box-1 h3 {
   font-size: 4rem;
-  color: #93d5ff;
+  -webkit-text-stroke: 2px #93d5ff;
+  color: transparent;
 }
 main #featured-work #work-box-1 #right-work-box-1 p {
   font-size: 1.5rem;
@@ -366,7 +382,7 @@ main #stat .stats-grid {
   max-width: 1200px;
 }
 main #stat .stats-grid .stat-item {
-  background-color: #0b043b;
+  background-color: #1545bf;
   color: #fff;
   padding: 30px;
   text-align: center;
@@ -385,6 +401,7 @@ main #stat .stats-grid .stat-item .stat-number {
 }
 main #stat .stats-grid .stat-item .stat-label {
   font-size: 2rem;
+  color: #fff0be;
 }
 main #team {
   padding: 4rem;
@@ -430,7 +447,8 @@ main #testimonals #cards-wrap #testominal-card {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #27264a;
+  background-color: #163ea58f;
+  border: 1px solid #979797;
   padding: 30px;
   border-radius: 8px;
   width: 80%;
@@ -440,10 +458,10 @@ main #testimonals #cards-wrap #testominal-card {
 }
 main #testimonals #cards-wrap .info {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
-main #testimonals #cards-wrap .info .info-img {
+main #testimonals #cards-wrap .info .info-img img {
   border-radius: 50%;
 }
 main #end-message h3 {
@@ -463,6 +481,42 @@ footer {
   color: #fff;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-}/*# sourceMappingURL=style.css.map */
+  gap: 1rem;
+  padding: 5rem;
+}
+
+#links{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect{
+    text-decoration: none;
+    
+}
+
+.right-services img{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+.right-services:hover img{
+    scale: 1.1;
+    border: 1px solid #fff;
+}
+.left-service img{
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+.left-service:hover img{
+    scale: 1.05;
+    border: 1px solid #fff;
+}
